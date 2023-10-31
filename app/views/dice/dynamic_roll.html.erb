@@ -1,0 +1,9 @@
+<h1><%= @number_of_dice %>d<%= @sides %></h1>
+
+<% results = Array.new(@number_of_dice) { rand(1..@sides) } %>
+
+<ul>
+<% results.each_with_index do |result, index| %>
+  <li><%= result %></li>
+<% end %>
+</ul>
